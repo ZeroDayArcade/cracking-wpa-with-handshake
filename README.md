@@ -77,7 +77,7 @@ python3 crack_handshake.py """WPA*02*1709ba709b92c3eb7b662036b02e843c*6c5940096f
 
 Our sample password list is enough to successfully crack both of these examples. And of course you can always supply your own passwords list, or add your own passwords to passlist.txt. 
 
-This script was tested on several versions of Linux including Kali Linux running on a x86-64 Intel machine and Raspian (on a Raspberry Pi 4/ARM processor) as well as on macOS. It was tested with hashcat examples from the hashcat forums and with real captured frames from a simple penetration test with a weak password. It should work on pretty much everything running Python 3, and was tested with Python 3.7 through 3.11.
+This script was tested on several versions of Linux including Kali Linux running on a x86-64 Intel machine and Raspian (on a Raspberry Pi 4/ARM processor) as well as on macOS and Windows. It was tested with hashcat examples from the hashcat forums and with real captured frames from a simple penetration test with a weak password. It should work on pretty much everything running Python 3, and was tested with Python 3.7 through 3.11.
 
 
 ## Acknowledgements
