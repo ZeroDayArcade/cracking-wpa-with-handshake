@@ -49,7 +49,7 @@ crack_password.py """<WPA02_HASHCAT_HC22000_FORMAT_HASHLINE>""" <PASSWORD_LIST_S
 
 Note that `<PASSWORD_LIST_SRC>` can be ommited to simply use the sample `passlist.txt` file that comes with this repo.
 
-The script can also be imported by other python scripts and the `crack_handshake()` funtion can be supplied with parameters like so: 
+The script can also be imported by other python scripts and the `crack_handshake()` function can be supplied with parameters like so: 
 ```
 crack_password(mic, mac_ap, mac_cl, essid, nonce_ap, nonce_cl, eapol_client)
 ```
