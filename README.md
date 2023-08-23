@@ -43,7 +43,7 @@ Personally, I like to have short and simple code examples to build off of, or to
 
 This script is built to work with hashcat hashlines (hc22000 format) out of the box. For those unfamiliar, these hashlines contain all of the information described above when they start with `WPA*02`. To attempt a crack with one of these hashlines simply run:
 ```
-python crack_handshake.py """<WPA02_HASHCAT_HC22000_FORMAT_HASHLINE>""" <PASSWORD_LIST_SRC>
+python3 crack_handshake.py """<WPA02_HASHCAT_HC22000_FORMAT_HASHLINE>""" <PASSWORD_LIST_SRC>
 ```
 **IMPORTANT:** When running the script in this manor make sure to use triple quotes around the hashline. Otherwise characters like ? or * in the hashline can cause the script to run incorrectly and can cause weird problems in your Terminal. 
 
@@ -66,13 +66,13 @@ cd cracking-wpa-with-handshake
 ```
 Test the script with a hashcat example:
 ```
-python crack_handshake.py """WPA*02*024022795224bffca545276c3762686f*6466b38ec3fc*225edc49b7aa*54502d4c494e4b5f484153484341545f54455354*10e3be3b005a629e89de088d6a2fdc489db83ad4764f2d186b9cde15446e972e*0103007502010a0000000000000000000148ce2ccba9c1fda130ff2fbbfb4fd3b063d1a93920b0f7df54a5cbf787b16171000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001630140100000fac040100000fac040100000fac028000*a2""" passlist.txt
+python3 crack_handshake.py """WPA*02*024022795224bffca545276c3762686f*6466b38ec3fc*225edc49b7aa*54502d4c494e4b5f484153484341545f54455354*10e3be3b005a629e89de088d6a2fdc489db83ad4764f2d186b9cde15446e972e*0103007502010a0000000000000000000148ce2ccba9c1fda130ff2fbbfb4fd3b063d1a93920b0f7df54a5cbf787b16171000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001630140100000fac040100000fac040100000fac028000*a2""" passlist.txt
 ```
 
 Another hashcat example from the hashcat forums (<a href="https://hashcat.net/forum/thread-10253-page-2.html">Source</a>):
 
 ```
-python crack_handshake.py """WPA*02*1709ba709b92c3eb7b662036b02e843c*6c5940096fb6*64cc2edaeb52*6c686c64*ca37bb6be93179b0ce86e0f4e393d742fca6854ace6791f29a7d0c0ec1534086*0103007502010a00000000000000000001f09960e32863aa57ba250769b6e12d959a5a1f1cc8939d6bed4401a16092fa72000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001630140100000fac040100000fac040100000fac020000*00"""
+python3 crack_handshake.py """WPA*02*1709ba709b92c3eb7b662036b02e843c*6c5940096fb6*64cc2edaeb52*6c686c64*ca37bb6be93179b0ce86e0f4e393d742fca6854ace6791f29a7d0c0ec1534086*0103007502010a00000000000000000001f09960e32863aa57ba250769b6e12d959a5a1f1cc8939d6bed4401a16092fa72000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001630140100000fac040100000fac040100000fac020000*00"""
 ```
 
 Our sample password list is enough to successfully crack both of these examples. And of course you can always supply your own passwords list, or add your own passwords to passlist.txt. 
