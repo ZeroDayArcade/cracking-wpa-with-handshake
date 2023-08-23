@@ -43,7 +43,7 @@ Personally, I like to have short and simple code examples to build off of, or to
 
 This script is built to work with hashcat hashlines (hc22000 format) out of the box. For those unfamiliar, these hashlines contain all of the information described above when they start with `WPA*02`. To attempt a crack with one of these hashlines simply run:
 ```
-crack_handshake.py """<WPA02_HASHCAT_HC22000_FORMAT_HASHLINE>""" <PASSWORD_LIST_SRC>
+python crack_handshake.py """<WPA02_HASHCAT_HC22000_FORMAT_HASHLINE>""" <PASSWORD_LIST_SRC>
 ```
 **IMPORTANT:** When running the script in this manor make sure to use triple quotes around the hashline. Otherwise characters like ? or * in the hashline can cause the script to run incorrectly and can cause weird problems in your Terminal. 
 
