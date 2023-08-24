@@ -1,6 +1,8 @@
 # Cracking WPA/WPA2 WiFi Passwords from a Captured Handshake
 A python script for cracking WPA/WPA2 PSK passwords with a captured handshake. For cracking passwords from a captured PMKID, see our other repo here: <a href="https://github.com/ZeroDayArcade/wpa-password-cracking-with-pmkid">WPA/WPA2 Password Cracking in Python - PMKID</a>
 
+For capturing a handshake, see our <a href="https://github.com/ZeroDayArcade/capture-handshake-wpa-wifi-hacking">WPA/WPA2 Handshake Capture script</a>.
+
 This script can crack WiFi passwords for WPA and WPA2 networks when supplied with information contained within captured packets from a 4-way handshake. In other words when supplied with: 
 1. MIC
 2. SSID
@@ -26,7 +28,7 @@ Note that this is much different than attempting to login to the network by typi
 
 ## How the script works
 
-We'll be going over how to obtain a MIC (+Nonces and EAPoL frames) from an AP in a seperate tutorial/repo with another short script and a WiFi adapter. You can also obtain this information with <a href="https://github.com/ZerBea/hcxdumptool">hcxdumptool</a> or the <a href="https://github.com/risinek/esp32-wifi-penetration-tool">ESP32 Wi-Fi Penetration Tool</a>.
+You can use our <a href="https://github.com/ZeroDayArcade/capture-handshake-wpa-wifi-hacking">WPA/WPA2 Handshake Capture script</a> to obtain a MIC (+Nonces and EAPoL frames) from an AP with a ~$10 WiFi adapter. This will also produce a `WPA*02` hashcat hc22000 format hash line that you can run directly with this script (see below). Alternatively you can obtain this information with <a href="https://github.com/ZerBea/hcxdumptool">hcxdumptool</a> or the <a href="https://github.com/risinek/esp32-wifi-penetration-tool">ESP32 Wi-Fi Penetration Tool</a>.
 
 This script (`crack_handshake.py`) does the password cracking that comes after the MIC / Nonces/ EAPoL frames have been obtained from the Access Point.
 
@@ -41,11 +43,11 @@ Personally, I like to have short and simple code examples to build off of, or to
 
 ## Running the script
 
-This script is built to work with hashcat hashlines (hc22000 format) out of the box. For those unfamiliar, these hashlines contain all of the information described above when they start with `WPA*02`. To attempt a crack with one of these hashlines simply run:
+This script is built to work with hashcat hash lines (hc22000 format) out of the box. For those unfamiliar, these hash lines contain all of the information described above when they start with `WPA*02`. To attempt a crack with one of these hash lines simply run:
 ```
 python3 crack_handshake.py """<WPA02_HASHCAT_HC22000_FORMAT_HASHLINE>""" <PASSWORD_LIST_SRC>
 ```
-**IMPORTANT:** When running the script in this manor make sure to use triple quotes around the hashline. Otherwise characters like ? or * in the hashline can cause the script to run incorrectly and can cause weird problems in your Terminal. 
+**IMPORTANT:** When running the script in this manor make sure to use triple quotes around the hash line. Otherwise characters like ? or * in the hash line can cause the script to run incorrectly and can cause weird problems in your Terminal. 
 
 Note that `<PASSWORD_LIST_SRC>` can be ommited to simply use the sample `passlist.txt` file that comes with this repo.
 
