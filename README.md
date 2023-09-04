@@ -15,7 +15,7 @@ along with a passwords list.
 
 A sample list of the top 100 passwords is included for testing. In a real world scenario, you'd typically use a much larger list. This script is for demonstration purposes and built for comprehension over speed. It is meant to help those looking to build their own cracking tools get started with a bare-bones example.
 
-***Warning:** Only ever hack a network you own and have legal permission to hack. The code and information in this repository are for educational purposes only. Study it to understand concepts in penetration testing and only ever use it in a controlled environment for security analysis, password recovery and learning.* 
+***Reminder:** Only ever hack a network you own and have legal permission to hack. Any hacking skills/knowledge gained from this repository should only be used in the context of security research, penetration testing, password recovery, and education.* 
 
 ## Background Information
 
