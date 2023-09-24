@@ -97,6 +97,4 @@ https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credenti
 <a href="https://github.com/ZeroDayArcade/wpa-password-cracking-with-pmkid/">Cracking WiFi Passwords with PMKID</a>  
 <a href="https://github.com/ZeroDayArcade/capture-handshake-wpa-wifi-hacking">Capturing 4-Way Handshake from WPA/WPA2 Networks</a>  
 
-# Find Hacking Bounties in Gaming:
-🎮  <a href="https://zerodayarcade.com/bounties">zerodayarcade.com/bounties</a>
 
